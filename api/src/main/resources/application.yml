@@ -1,0 +1,7 @@
+micronaut:
+
+  application:
+    name: api
+
+  server:
+    port: ${PORT:8080}

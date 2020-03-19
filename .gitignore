@@ -173,4 +173,18 @@ hs_err_pid*
 .idea/**/markdown-navigator.xml
 .idea/**/markdown-navigator/
 
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Exclude maven wrapper
+!/.mvn/wrapper/maven-wrapper.jar
+
 # End of https://www.gitignore.io/api/java,phpstorm,intellij+all
