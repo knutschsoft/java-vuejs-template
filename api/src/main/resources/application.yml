@@ -5,3 +5,25 @@ micronaut:
 
   server:
     port: ${PORT:8080}
+
+  security:
+    basic:
+      username: root
+      password: root
+    enabled: true
+    interceptUrlMap:
+      - pattern: "/health"
+        access:
+          - isAnonymous()
+      - pattern: "/**"
+        access:
+          - isAuthenticated()
+
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      documentation:
+        paths: classpath:static
+        mapping: /**
