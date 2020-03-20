@@ -27,3 +27,28 @@ micronaut:
       documentation:
         paths: classpath:static
         mapping: /**
+
+jpa:
+  default:
+    packages-to-scan:
+      - 'com.riseofkingdom.island'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: validate
+        show_sql: false
+
+datasources:
+  default:
+    url: 'jdbc:mariadb://${DB_HOST:localhost}:${DB_PORT:3306}/data?useLegacyDatetimeCode=false&serverTimezone=UTC'
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driverClassName: org.mariadb.jdbc.Driver
+
+flyway:
+  datasources:
+    default:
+      table: 'FLYWAY'
+      schemas: 'data'
+      connect-retries: 60
+      locations: classpath:migration
