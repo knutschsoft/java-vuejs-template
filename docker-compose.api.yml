@@ -5,5 +5,8 @@ services:
     build: ./api
     ports:
       - 8080:8080
+    restart: always
+    environment:
+      DB_HOST: database
     depends_on:
-      - flyway
+      - database
