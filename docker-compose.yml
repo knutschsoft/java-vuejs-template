@@ -20,3 +20,13 @@ services:
       migrate
     depends_on:
       - database
+
+  api:
+    build: ./api
+    ports:
+      - 8080:8443
+    restart: always
+    environment:
+      DB_HOST: database
+    depends_on:
+      - database

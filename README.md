@@ -2,11 +2,10 @@
 
 # Startup Environment
 
-The `docker-compose.yml` will spin up a MariaDB database for api development.  
-All other docker-compose files will additionally startup the related services.  
-The startup will throw some exceptions until the database is available.
+Depending on the requirements of teh development environment you 
+can spin up the required services from the `docker-compose.yml` file.
 
-`docker-compose -f docker-compose.yml [-f docker-compose.api.yml] [-f docker-compose.client.yml] up -d --build`
+`docker-compose up -d --build [flyway|api]`
 
 # API
 
@@ -17,6 +16,6 @@ The startup will throw some exceptions until the database is available.
 
 ### Other 
 
-Endpoint: `localhost:8080`  
-Documentation: `localhost:8080/documentation.html`  
+Endpoint: `https://localhost:8080`  
+Documentation: `https://localhost:8080/documentation.html`  
 Credentials: `root:root`

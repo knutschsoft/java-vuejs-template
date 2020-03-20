@@ -6,6 +6,10 @@ micronaut:
   server:
     port: ${PORT:8080}
 
+  ssl:
+    enabled: true
+    build-self-signed: true
+
   security:
     basic:
       username: root
