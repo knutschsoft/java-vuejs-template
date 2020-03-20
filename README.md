@@ -10,6 +10,13 @@ The startup will throw some exceptions until the database is available.
 
 # API
 
+#### Links
+
+* https://docs.micronaut.io/latest/guide/index.html  
+* https://micronaut-projects.github.io/micronaut-data
+
+### Other 
+
 Endpoint: `localhost:8080`  
 Documentation: `localhost:8080/documentation.html`  
 Credentials: `root:root`
