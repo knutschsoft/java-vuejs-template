@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  database:
+    image: mariadb:10.4
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+
+  flyway:
+    image: flyway/flyway
+    command:
+      -url=jdbc:mariadb://database
+      -schemas=data
+      -table=FLYWAY
+      -user=root
+      -password=root
+      -connectRetries=60
+      migrate
+    depends_on:
+      - database
