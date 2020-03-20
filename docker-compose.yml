@@ -30,3 +30,36 @@ services:
       DB_HOST: database
     depends_on:
       - database
+    networks:
+      - client-to-api
+
+  client:
+    build:
+      context: client
+      args:
+        APP_ENVIRONMENT: 'dev'
+    ports:
+      - 9091:80
+      - 9090:443
+      - ${OUTER_WEBPACK_PORT}:${OUTER_WEBPACK_PORT}
+    environment:
+      CONTAINER_USER:     docker
+      CONTAINER_GROUP:    docker
+      HOST_UID:           ${HOST_UID} # set in ~/.bashrc
+      HOST_GID:           ${HOST_GID} # set in ~/.bashrc
+      DEPLOY_ENVIRONMENT:  dev
+    restart: always
+    depends_on:
+      - api
+    tty: true
+    volumes:
+      - ./client/:/var/www/html
+    networks:
+      - client-to-www
+      - client-to-api
+
+networks:
+  client-to-www:
+    driver: bridge
+  client-to-api:
+    driver: bridge
