@@ -1,4 +1,4 @@
-package template.api.domain.shared;
+package api.domain.shared;
 
 import java.time.ZonedDateTime;
 

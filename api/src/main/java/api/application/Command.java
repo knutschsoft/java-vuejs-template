@@ -1,4 +1,4 @@
-package template.api.application;
+package api.application;
 
 import io.reactivex.Maybe;
 

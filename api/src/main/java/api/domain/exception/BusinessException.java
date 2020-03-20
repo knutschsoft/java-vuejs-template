@@ -1,4 +1,4 @@
-package template.api.domain.exception;
+package api.domain.exception;
 
 public class BusinessException extends RuntimeException {
 

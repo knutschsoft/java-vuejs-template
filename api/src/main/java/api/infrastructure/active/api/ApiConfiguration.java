@@ -1,4 +1,4 @@
-package template.api.infrastructure.active.api;
+package api.infrastructure.active.api;
 
 import javax.inject.Singleton;
 

@@ -1,4 +1,4 @@
-package template.api.infrastructure.active.api.filter;
+package api.infrastructure.active.api.filter;
 
 import org.reactivestreams.Publisher;
 

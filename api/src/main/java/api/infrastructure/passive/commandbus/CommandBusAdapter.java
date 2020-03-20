@@ -1,4 +1,4 @@
-package template.api.infrastructure.passive.commandbus;
+package api.infrastructure.passive.commandbus;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -11,12 +11,12 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import api.application.Command;
+import api.application.CommandBus;
+import api.application.CommandHandler;
 import io.micronaut.context.BeanContext;
 import io.micronaut.inject.qualifiers.Qualifiers;
 import io.reactivex.Maybe;
-import template.api.application.Command;
-import template.api.application.CommandBus;
-import template.api.application.CommandHandler;
 
 @Singleton
 public class CommandBusAdapter implements CommandBus {

@@ -1,4 +1,4 @@
-package template.api.infrastructure.active.api.security;
+package api.infrastructure.active.api.security;
 
 import java.util.Collections;
 import java.util.Objects;

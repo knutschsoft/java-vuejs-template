@@ -1,4 +1,4 @@
-package template.api.application.command;
+package api.application.command;
 
 import java.util.Objects;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import template.api.application.Command;
+import api.application.Command;
 
 public class SayHello extends Command<String> {
 

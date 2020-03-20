@@ -1,5 +1,6 @@
-package template.api.infrastructure.active.api.exception.handler;
+package api.infrastructure.active.api.exception.handler;
 
+import api.domain.exception.BusinessException;
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
@@ -7,7 +8,6 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Error;
 import io.micronaut.http.hateoas.JsonError;
 import io.micronaut.http.hateoas.Link;
-import template.api.domain.exception.BusinessException;
 
 @Controller
 public class BusinessHandler {
